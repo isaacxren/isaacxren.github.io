@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 600px) {
+  .main {
+    position: absolute;
+    margin: 34px 34px 0;
+  }
+  
+  .card {
+    width: 240px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .main {
+    position: absolute;
+    margin: 34px 68px 0;
+  }
+  
+  .card {
+    float: right;
+    width: 240px;
+    margin: 0 0 5% 5%;
+  }
+}
+
+@media screen and (min-width: 865px) {
+  .main {
+    position: absolute;
+    margin-top: 34px;
+    left: 50%;
+    margin-left: -360px;
+    width: 720px;
+  }
+  
+  .card {
+    float: right;
+    width: 240px;
+    margin: 0 0 5% 5%;
+  }
+}
+
+html {
+  font-family: "Quattrocento Sans", Helvetica, sans-serif;
+  font-size: 12pt;
+}
+
+ul {
+  list-style-type: "• ";
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  margin: 12px;
+}
+
+a {
+  color: #ff6666;
+}
+
+a:visited {
+  color: #9966cc;
+}
+
+tt {
+  font-family: "Inconsolata", sans-serif;
+}
