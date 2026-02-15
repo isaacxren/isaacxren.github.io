@@ -5,8 +5,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inconsolata:wght@200..900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="my_style.css">
 <base target="_blank">
-{% seo -%}
+{% if page.title -%}
+<title>{{ page.title }}</title>
+{%- else -%}
+<title>Isaac Ren</title>
+{% endif %}
+{% seo title=false -%}
 </head>
