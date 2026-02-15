@@ -102,3 +102,13 @@ Software
 {% for item in site.data.items.software %}
 * [`{{ item.title }}`]({{ item.url }}), {{ item.description }}.
 {% endfor %}
+
+<hr />
+
+<div class="centered" style="clear:both">
+<small>
+Note: many links on this webpage are external, and so are subject to the
+lifespans of the hosting websites.
+<br />
+Last updated {{ site.time | date_to_string }}.</small>
+</div>
