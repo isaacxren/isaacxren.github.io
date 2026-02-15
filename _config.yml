@@ -1,0 +1,10 @@
+title: Isaac Ren
+domain: isaacxren.github.io
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://isaacxren.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: isaac_paperclip
+github_username:  th-rtyf-re
+
+# Build settings
+plugins:
+  - jekyll-seo-tag
