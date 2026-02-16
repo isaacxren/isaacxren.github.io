@@ -41,9 +41,18 @@
   }
 }
 
-html {
-  font-family: "Quattrocento Sans", sans-serif;
-  font-size: 12pt;
+html, .card th {
+  font-family: "Fraunces", serif;
+  font-weight: 340;
+  font-size: 15px;
+}
+
+code {
+  font-family: "Google Sans Code", monospace;
+}
+
+strong {
+  font-weight: 680;
 }
 
 ul {
@@ -57,19 +66,15 @@ li {
 }
 
 a {
-  color: #ff6666;
+  color: #ff3333;
 }
 
 a:visited {
-  color: #9966cc;
+  color: #9933cc;
 }
 
 .centered {
   text-align: center;
-}
-
-code {
-  font-family: "Inconsolata", sans-serif;
 }
 
 .card table{
@@ -79,7 +84,6 @@ code {
 
 .card td, .card th {
   vertical-align: top;
-  font-weight: normal;
 }
 
 hr {
@@ -88,7 +92,7 @@ hr {
 }
 
 hr::after {
-  content: "~ • ~";
+  content: "~ · ~";
   display: block;
   text-align: center;
 }
