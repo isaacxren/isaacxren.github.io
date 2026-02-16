@@ -14,6 +14,7 @@ layout: default
 | twitter: | [@{{ site.twitter.username }}](https://twitter.com/{{ site.twitter.username }})
 |  github: | [@{{ site.github.username }}](https://github.com/{{ site.github.username }})
 
+<hr />
 </div>
 
 Isaac Ren
