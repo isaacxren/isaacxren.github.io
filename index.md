@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Isaac Ren
 ---
 
 <div class="card" markdown="1">
@@ -10,10 +9,10 @@ title: Isaac Ren
 <hr />
 
 | address: | I am currently here<br />But at some point I'll be<br />somewhere else
-|---------:|:-
-| email:   | firstlast@kth.se
-| twitter: | [@isaac_paperclip](https://twitter.com/isaac_paperclip)
-| github:  | [@th-rtyf-re](https://github.com/th-rtyf-re)
+|---------:|:------------------------------------------------------------------
+|   email: | firstlast@kth.se
+| twitter: | [@{{ site.twitter.username }}](https://twitter.com/{{ site.twitter.username }})
+|  github: | [@{{ site.github.username }}](https://github.com/{{ site.github.username }})
 
 </div>
 
