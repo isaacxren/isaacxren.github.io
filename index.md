@@ -30,7 +30,6 @@ My research interests include topological data analysis and homological
 algebra. I have also worked on algebraic rewriting theory and computational
 aspects of knot homology.
 
-
 I have previously studied at École Normale Supérieure de Lyon and Lycée Louis
 le Grand. I speak English and French.
 
@@ -63,33 +62,35 @@ Conferences & seminars
 ----------------------
 
 {% for item in site.data.items.talks %}
-* "{{ item.title }}," {% if item.cospeakers -%}
-  with {{ item.cospeakers }}, {% endif -%}
+* "{{ item.title }}," {{""}}
+  {%- if item.cospeakers -%}
+    with {{ item.cospeakers }}, {{""}}
+  {%- endif -%}
   [{{ item.conference }}]({{ item.conf_url }}), {{ item.date }}. {{ item.location }}
   {%- assign first = true -%}
-  {%- if item.slides or item.video -%}
-    : {% if item.slides -%}
-      {% if first != true %}, {% endif -%}
-      [slides]({{ item.slides }})
-      {%- assign first = false -%}
-    {% endif -%}
-    {% if item.video -%}
-      {% if first != true %}, {% endif -%}
-      [video]({{ item.video }})
-      {%- assign first = false -%}
-    {% endif -%}
-  {% endif -%}
+  {%- if item.slides or item.video %}: {% endif -%}
+  {%- if item.slides -%}
+    {%- if first != true %}, {% endif -%}
+    [slides]({{ item.slides }})
+    {%- assign first = false -%}
+  {%- endif -%}
+  {%- if item.video -%}
+    {%- if first != true %}, {% endif -%}
+    [video]({{ item.video }})
+    {%- assign first = false -%}
+  {%- endif -%}
   {%- for subitem in item.related -%}
-    {% if subitem.slides -%}
-      {% if first != true %}, {% endif -%}
+    {%- if subitem.slides -%}
+      {%- if first != true %}, {% endif -%}
       [slides]({{ subitem.slides }})
       {%- assign first = false -%}
-    {% endif -%}
-    {% if subitem.video -%}
-      {% if first != true %}, {% endif -%}
+    {%- endif -%}
+    {%- if subitem.video -%}
+      {%- if first != true %}, {% endif -%}
       [video]({{ subitem.video }})
       {%- assign first = false -%}
-    {%- endif %} from a similar talk at [{{ subitem.conference }}]({{ subitem.conf_url }})
+    {%- endif -%}
+    {{""}} from a similar talk at [{{ subitem.conference }}]({{ subitem.conf_url }})
   {%- endfor -%}
   .
 {%- endfor %}
@@ -100,7 +101,7 @@ Software
 --------
 
 {% for item in site.data.items.software %}
-* [`{{ item.title }}`]({{ item.url }}), {{ item.description }}.
+* [**{{ item.title }}**]({{ item.url }}), {{ item.description }}.
 {% endfor %}
 
 
