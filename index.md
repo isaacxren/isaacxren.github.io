@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[Isaac Ren](/)
+[Isaac Ren](#)
 ===========
 {: title="The 'X' in the URL is my middle initial, Xiaoran :)"}
 {: #top}
