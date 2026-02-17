@@ -2,9 +2,10 @@
 layout: default
 ---
 
-[Isaac Ren](#) {#top}
+[Isaac Ren](/)
 ===========
 {: title="The 'X' in the URL is my middle initial, Xiaoran :)"}
+{: #top}
 
 <div class="card" markdown="1">
 ![A picture of me with a trombone](me.jpg "This is the current best picture of myself that I have."){:width="240px"}
@@ -13,7 +14,7 @@ layout: default
 
 *Jump to:*
 <br />
-[papers](#preprints--publications) · [talks](#conferences--seminars) · [software](#software)
+[papers](#papers) · [talks](#talks) · [software](#software)
 
 <hr />
 
@@ -41,7 +42,7 @@ le Grand. I speak English and French.
 
 <hr />
 
-Preprints & publications
+Preprints & publications {#papers}
 ------------------------
 
 ### Preprints
@@ -64,7 +65,7 @@ Preprints & publications
 
 <hr />
 
-Conferences & seminars
+Conferences & seminars {#talks}
 ----------------------
 
 {% for item in site.data.items.talks %}
@@ -103,7 +104,7 @@ Conferences & seminars
 
 <hr />
 
-Software
+Software {#software}
 --------
 
 {% for item in site.data.items.software %}
