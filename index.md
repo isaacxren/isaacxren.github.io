@@ -40,7 +40,7 @@ aspects of knot homology.
 I have previously studied at École Normale Supérieure de Lyon and Lycée Louis
 le Grand. I speak English and French.
 
-<hr />
+{% include to-top.html %}
 
 Preprints & publications {#papers}
 ------------------------
@@ -63,7 +63,7 @@ Preprints & publications {#papers}
 * ["{{ item.title }},"]({{ item.url }}) with {{ item.authors }}, {{ item.location }}, {{ item.year }}.
 {%- endfor %}
 
-<hr />
+{% include to-top.html %}
 
 Conferences & seminars {#talks}
 ----------------------
@@ -102,7 +102,7 @@ Conferences & seminars {#talks}
   .
 {%- endfor %}
 
-<hr />
+{% include to-top.html %}
 
 Software {#software}
 --------
@@ -113,7 +113,7 @@ Software {#software}
 
 
 <div class="centered" style="clear:both">
-<small><hr /></small>
+{% include to-top.html %}
 <small markdown="1">
 Typeset in [Fraunces](https://fraunces.undercase.xyz/) by Undercase Type.
 <br />
