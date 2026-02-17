@@ -2,6 +2,10 @@
 layout: default
 ---
 
+[Isaac Ren](#) {#top}
+===========
+{: title="The 'X' in the URL is my middle initial, Xiaoran :)"}
+
 <div class="card" markdown="1">
 ![A picture of me with a trombone](me.jpg "This is the current best picture of myself that I have."){:width="240px"}
 <br />
@@ -16,10 +20,6 @@ layout: default
 
 <hr />
 </div>
-
-Isaac Ren
-=========
-{: title="The 'X' in the URL is my middle initial, Xiaoran :)"}
 
 I am a math PhD student at
 [KTH Royal Institute of Technology](https://www.kth.se/) in Stockholm, under

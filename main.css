@@ -2,47 +2,55 @@
 
 @media screen and (max-width: 600px) {
   .main {
-    position: absolute;
-    margin: 17px 17px 0;
+    margin: 0 17px;
+    padding-top: 17px;
   }
   
   .card {
-    width: 240px;
     margin: 0 auto;
   }
 
-  h1 {
+  #top { /* page title */
     text-align: center;
   }
 }
 
 @media screen and (min-width: 601px) {
   .main {
-    position: absolute;
-    margin: 34px 68px 0;
+    margin: 0 68px;
+    padding-top: 34px;
   }
   
   .card {
     float: right;
-    width: 240px;
-    margin: 0 0 5% 5%;
+    margin: 17px 0 17px 34px;
+  }
+
+  #top {
+    display: inline-block;
+    margin-bottom: 6.1px;
   }
 }
 
 @media screen and (min-width: 865px) {
   .main {
-    position: absolute;
-    margin-top: 34px;
-    left: 50%;
-    margin-left: -360px;
     width: 720px;
+    margin: 0 auto;
   }
-  
-  .card {
-    float: right;
-    width: 240px;
-    margin: 0 0 5% 5%;
-  }
+}
+
+#top a {
+  color: #000;
+  text-decoration: none;
+}
+
+.main {
+  padding-bottom: 17px;
+}
+
+.card {
+  width: 240px;
+  text-align: center;
 }
 
 html {
@@ -97,10 +105,23 @@ a:visited {
 hr {
   border: none;
   color: #000000;
+  margin: 18.675px 0 0;
 }
 
 hr::after {
   content: "~ · ~";
   display: block;
   text-align: center;
+}
+
+.card hr {
+  margin: 7px 0 0;
+}
+
+.card p {
+  margin: 0 0 15px;
+}
+
+h2 {
+  margin-top: 15px;
 }
