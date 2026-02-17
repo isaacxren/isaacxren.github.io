@@ -10,6 +10,11 @@ layout: default
 ![A picture of me with a trombone](me.jpg "This is the current best picture of myself that I have."){:width="240px"}
 <br />
 <small>Photo credit: Flora Gaudillière, 2019</small>
+
+*Jump to:*
+<br />
+[papers](#preprints--publications) · [talks](#conferences--seminars) · [software](#software)
+
 <hr />
 
 | address: | I am currently here<br />But at some point I'll be<br />somewhere else
