@@ -102,7 +102,7 @@ Software
 --------
 
 {% for item in site.data.items.software %}
-* [**{{ item.title }}**]({{ item.url }}), {{ item.description }}.
+* [***{{ item.title }}***]({{ item.url }}), {{ item.description }}.
 {% endfor %}
 
 
@@ -111,8 +111,8 @@ Software
 <small markdown="1">
 Typeset in [Fraunces](https://fraunces.undercase.xyz/) by Undercase Type.
 <br />
-Note: many links on this webpage are external, and so are subject to the
-lifespans of the hosting websites.
+External links are not regularly maintained and may be broken.
 <br />
-Last updated {{ site.time | date_to_string }}.</small>
+Last updated {{ site.time | date_to_string }}.
+</small>
 </div>
