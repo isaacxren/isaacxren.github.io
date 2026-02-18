@@ -81,14 +81,6 @@ li {
   margin: 12px;
 }
 
-a {
-  color: #ff3333;
-}
-
-a:visited {
-  color: #9933cc;
-}
-
 .centered {
   text-align: center;
 }
@@ -114,10 +106,6 @@ hr::after {
   text-align: center;
 }
 
-hr.to-top::after {
-  content: "~ ^ ~";
-}
-
 .card hr {
   margin: 7px 0 0;
 }
@@ -130,6 +118,22 @@ h2 {
   margin-top: 15px;
 }
 
+a {
+  color: #ff3333;
+}
+
+a:visited {
+  color: #9933cc;
+}
+
+a:focus {
+  outline-color: #ff3333;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 .to-top {
   text-align: center;
 }
@@ -139,6 +143,12 @@ h2 {
   color: #000000;
 }
 
-.to-top a:hover {
+@media (hover: hover){
+  .to-top a:hover {
+    text-decoration: underline;
+  }
+}
+
+.to-top a:active {
   text-decoration: underline;
 }
