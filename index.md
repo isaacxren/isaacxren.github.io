@@ -30,8 +30,8 @@ layout: default
 I am a math PhD student at
 [KTH Royal Institute of Technology](https://www.kth.se/) in Stockholm, under
 the supervision of Associate Professor
-[Martina Scolamiero](https://www.kth.se/profile/scola). My official profile
-page is [here](https://www.kth.se/profile/isaacren).
+[Martina Scolamiero](https://www.kth.se/profile/scola). I also have an
+[official profile page](https://www.kth.se/profile/isaacren).
 
 My research interests include topological data analysis and homological
 algebra. I have also worked on algebraic rewriting theory and computational
