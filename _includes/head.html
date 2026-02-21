@@ -13,10 +13,10 @@
 
 <link rel="stylesheet" href="/main.css">
 
-{% if page.title -%}
-<title>{{ page.title }}</title>
-{%- else -%}
+{% if page.title == site.title or page.title == nil -%}
 <title>{{ site.title }}</title>
-{% endif -%}
 {% seo title=false -%}
+{%- else -%}
+{% seo -%}
+{% endif -%}
 </head>
