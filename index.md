@@ -8,7 +8,7 @@ layout: default
 {: #top}
 
 <div class="card" markdown="1">
-![A picture of me with a trombone](me.jpg "This is the current best picture of myself that I have."){:width="240px"}
+![A picture of me with a trombone](me.jpg "This is the current best picture of myself that I have."){:width="240px"}{:height="360"}{:fetchpriority="high"}
 <br />
 <small>Photo credit: Flora Gaudillière, 2019</small>
 
