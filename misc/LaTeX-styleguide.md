@@ -123,7 +123,7 @@ Text & general formatting
 
 ### Whitespace
 
-* I recommend using indentations, and this style guide will refer to indentation. However, you may also follow this style guide while ignoring any rules about indentation.
+* I recommend using indentations, and this style guide will refer to indentation. However, you may also follow this style guide while ignoring all rules about indentation.
 * Tabs should be 2 spaces, except on Overleaf, where they should be 4 spaces because the indenation guidelines are fixed at 4 spaces. Do not use tabs to indent.
 * Remove trailing whitespace. Remove redundant spaces unless they are there for a good reason (such as formatting content in a table).
 
@@ -191,6 +191,7 @@ Sometimes there are several ways to write the same thing that are either identic
 * Use `\colon` instead of `:` when notating functions, but not when using a colon as a binary relation.
 * Use `\coloneq` instead of `\coloneqq`.
 * Use `\mid` instead of `|` when defining a set with conditions (e.g. `\{ x \in X \mid x > 0 \}`).
+* Place semantically closer super/subscripts closer to the symbol: for instance, the square of an indexed variable `x_i` should be written `x_i^2`, and not `x^2_i`. Ideally, you should be able to put parentheses around the first attachment: `(x_i)^2` makes sense, while `(x^2)_i` does not.
 
 {% include to-top.html %}
 
@@ -239,7 +240,7 @@ Sometimes, we need to call some commands inside of an environment. The typical e
 
 ```TeX
 \begin{equation}
-\label{E:equation-1}
+\label{E:linear-system}
   A x = b
 \end{equation}
 ```
@@ -304,6 +305,8 @@ Labels should be of the form `<envir>:<name>`, where
   | definition, remark, example | `R`, `D`, `Ex` |
   | equation, or any displayed math | `E` |
   | figure, table, algorithm | `F`, `T` or `Tab`, `A` |
+
+  See [Local commands](#local-commands) for an example of a labeled environment.
 * `<name>` briefly describes the labeled content. Use words, abbreviated or not. I suggest using `kebab-case` when using several words, although you may choose another convention: just be consistent!
 
 Comments
