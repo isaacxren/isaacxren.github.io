@@ -153,8 +153,113 @@ a:active { text-decoration: none; }
   a:active {
     text-decoration: underline;
   }
+
+  @media (hover: hover){
+    a:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-.to-top a:active {
-  text-decoration: underline;
+code.highlighter-rouge {
+  background-color: #efefef;
+  padding: 3px 2px 0.5px;
+  border-radius: 4px;
+}
+
+div.highlighter-rouge {
+  background-color: #efefef;
+  margin: 1em 0;
+  border-radius: 4px;  
+}
+
+div.highlight {
+  padding: 7px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+pre.highlight {
+  margin: 0;
+  padding: 0;
+}
+
+/* Code syntax highlighting from minima */
+/* See alternatives here: https://github.com/jwarby/jekyll-pygments-themes */
+
+.highlight, .highlighter-rouge {
+  .err   { color: #e3d2d2; background-color: #8c2121 } /* Error */
+
+  .c     { color: #8a8a8a } /* Comment */
+  .c1    { color: #8a8a8a } /* Comment.Single */
+  .cm    { color: #8a8a8a } /* Comment.Multiline */
+  .cp    { color: #8a8a8a } /* Comment.Preproc */
+  .cs    { color: #8a8a8a; font-style: italic }  /* Comment.Special */
+
+  .gd    { color: #d85a5a } /* Generic.Deleted */
+  .gd .x { color: #d85a5a } /* Generic.Deleted.Specific */
+  .ge    { font-style: italic } /* Generic.Emph */
+  .gh    { color: #999999 } /* Generic.Heading */
+  .gi    { color: #4ec64e } /* Generic.Inserted */
+  .gi .x { color: #4ec64e } /* Generic.Inserted.Specific */
+  .go    { color: #888888 } /* Generic.Output */
+  .gp    { color: #555555 } /* Generic.Prompt */
+  .gr    { color: #f07178 } /* Generic.Error */
+  .gs    { font-weight: bold } /* Generic.Strong */
+  .gt    { color: #f07178 } /* Generic.Traceback */
+  .gu    { color: #aaaaaa } /* Generic.Subheading */
+
+  .k     { color: #d85a7b } /* Keyword */
+  .kc    { color: #d85a7b } /* Keyword.Constant */
+  .kd    { color: #d85a7b } /* Keyword.Declaration */
+  .kp    { color: #d85a7b } /* Keyword.Pseudo */
+  .kr    { color: #d85a7b } /* Keyword.Reserved */
+  .kt    { color: #ffcb6b } /* Keyword.Type */
+
+  .n     { color: #c7d1d8 }
+  .na    { color: #11a69f } /* Name.Attribute */
+  .nb    { color: #d85a7b } /* Name.Builtin */
+  .bp    { color: #999999 } /* Name.Builtin.Pseudo */
+  .nc    { color: #11a69f } /* Name.Class */
+  .ne    { color: #990000 } /* Name.Exception */
+  .nf    { color: #5ab780 } /* Name.Function */
+  .ni    { color: #11a69f } /* Name.Entity */
+  .nn    { color: #11a69f } /* Name.Namespace */
+  .no    { color: #9d99e6 } /* Name.Constant */
+  .nt    { color: #de3581 } /* Name.Tag */
+  .nv    { color: #9680b1 } /* Name.Variable */
+  .vc    { color: #9680b1 } /* Name.Variable.Class */
+  .vg    { color: #9680b1 } /* Name.Variable.Global */
+  .vi    { color: #9680b1 } /* Name.Variable.Instance */
+
+  /* .o     { color: #bcd890 } */ /* Operator */
+  .ow    { color: #bcd890 } /* Operator.Word */
+  .p, .o { color: #4e009c } /* Punctuation */
+
+  .m     { color: #9d99e6 } /* Literal.Number */
+  .mf    { color: #9d99e6 } /* Literal.Number.Float */
+  .mh    { color: #9d99e6 } /* Literal.Number.Hex */
+  .mi    { color: #9d99e6 } /* Literal.Number.Integer */
+  .il    { color: #9d99e6 } /* Literal.Number.Integer.Long */
+  .mo    { color: #9d99e6 } /* Literal.Number.Oct */
+
+  .s     { color: #baa94a } /* Literal.String */
+  .s1    { color: #baa94a } /* Literal.String.Single */
+  .s2    { color: #baa94a } /* Literal.String.Double */
+  .sb    { color: #baa94a } /* Literal.String.Backtick */
+  .sc    { color: #baa94a } /* Literal.String.Char */
+  .sd    { color: #baa94a } /* Literal.String.Doc */
+  .se    { color: #baa94a } /* Literal.String.Escape */
+  .sh    { color: #baa94a } /* Literal.String.Heredoc */
+  .si    { color: #baa94a } /* Literal.String.Interpol */
+  .sr    { color: #009926 } /* Literal.String.Regex */
+  .ss    { color: #3c90f5 } /* Literal.String.Symbol */
+  .sx    { color: #baa94a } /* Literal.String.Other */
+
+  .w     { color: #eeffff } /* Text.Whitespace */
+
+  .lineno, .gl { color: #8a8a8a } /* Line Number */
+  .hll   { background-color: #373730 } /* Marked-lines */
 }

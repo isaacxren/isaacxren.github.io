@@ -11,7 +11,11 @@ layout: without-nav
 <br />
 <small>Photo credit: Flora Gaudillière, 2019</small>
 
-*Jump to:*
+*Go to:*
+<br />
+**home** · [misc](/misc/)
+
+*On this page:*
 <br />
 [papers](#papers) · [talks](#talks) · [software](#software)
 
