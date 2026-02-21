@@ -1,11 +1,10 @@
 ---
-layout: default
+layout: without-nav
 ---
 
 [Isaac Ren](#)
 ===========
 {: title="The 'X' in the URL is my middle initial, Xiaoran :)"}
-{: #top}
 
 <div class="card" markdown="1">
 ![A picture of me with a trombone](me.jpg "This is the current best picture of myself that I have."){:width="240px"}{:height="360"}{:fetchpriority="high"}
@@ -109,16 +108,4 @@ Software {#software}
 
 {% for item in site.data.items.software %}
 * [***{{ item.title }}***]({{ item.url }}), {{ item.description }}.
-{% endfor %}
-
-
-<div class="centered" style="clear:both">
-{% include to-top.html %}
-<small markdown="1">
-Typeset in [Fraunces](https://fraunces.undercase.xyz/) by Undercase Type.
-<br />
-External links are not regularly maintained and may be broken.
-<br />
-Last updated {{ site.time | date_to_string }}.
-</small>
-</div>
+{%- endfor %}

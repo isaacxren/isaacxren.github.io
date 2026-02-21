@@ -1,0 +1,13 @@
+<nav class="card nav-card">
+<span style="font-size: 1.2em; font-weight: bold">Isaac Ren</span>
+<hr />
+{% for item in site.data.nav -%}
+{%- if forloop.first == false %} · {% endif -%}
+{%- if page.dir == item.url and page.name == "index.md" -%}
+<strong>{{ item.name }}</strong>
+{%- else -%}
+<a href="{{ item.url }}">{{ item.name }}</a>
+{%- endif -%}
+{%- endfor %}
+<hr class="block-card-only" />
+</nav>

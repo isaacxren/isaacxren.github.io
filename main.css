@@ -1,97 +1,128 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 600px) {
-  .main {
+  .content {
     margin: 0 17px;
-    padding-top: 17px;
+    padding-top: 34px;
   }
   
   .card {
     margin: 0 auto;
   }
 
-  #top { /* page title */
+  h1:first-of-type { /* page title */
     text-align: center;
   }
 }
 
 @media screen and (min-width: 601px) {
-  .main {
+  .content {
     margin: 0 68px;
-    padding-top: 34px;
+    padding-top: 68px;
   }
   
   .card {
     float: right;
+    width: 240px;
     margin: 17px 0 17px 34px;
   }
 
-  #top {
+  .nav-card {
+    border-color: #000;
+    border-width: 3px;
+    border-left-style: double;
+    border-right-style: double;
+    border-radius: 7px;
+  }
+
+  h1:first-of-type {
     display: inline-block;
     margin-bottom: 6.1px;
+  }
+
+  hr.block-card-only {
+    display: none;
   }
 }
 
 @media screen and (min-width: 865px) {
-  .main {
+  .content {
     width: 720px;
     margin: 0 auto;
   }
 }
 
-#top a {
+html {
+  font-family: "Fraunces", serif;
+  font-weight: 340;
+  font-size: 15px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+footer {
+  flex-shrink: 0;
+  margin-bottom: 17px;
+}
+
+code {
+  font-family: "Recursive", monospace;
+  font-weight: 400;
+  font-size: 13.5px;
+}
+
+h1:first-of-type a {
   color: #000;
   text-decoration: none;
 }
 
-.main {
+h2 {
+  margin-top: 15px;
+}
+
+.content {
   padding-bottom: 17px;
+  flex: 1;
 }
 
 .card {
-  width: 240px;
+  max-width: 240px;
   text-align: center;
+
+  th { font-weight: 340 }
+  th, td { vertical-align: top }
+  hr { margin: 7px 0 0 }
+  p { margin: 0 0 15px }
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-html, .card th {
-  font-family: "Fraunces", serif;
-  font-weight: 340;
-  font-size: 15px;
-}
-
-code {
-  font-family: "Share Tech Mono", monospace;
-}
-
-strong {
-  font-weight: 680;
-}
+strong { font-weight: 680 }
 
 ul {
   list-style-type: "• ";
-  margin: 0px;
-  padding: 0px;
+  padding-inline-start: 12px;
 }
 
-li {
-  margin: 12px;
+li:not(#markdown-toc li) {
+  margin: 12px 0;
+}
+
+#markdown-toc li {
+  margin: 5px;
 }
 
 .centered {
   text-align: center;
 }
 
-.card table{
+table {
   margin-left: auto;
   margin-right: auto;
-}
-
-.card td, .card th {
-  vertical-align: top;
 }
 
 hr {
@@ -106,45 +137,20 @@ hr::after {
   text-align: center;
 }
 
-.card hr {
-  margin: 7px 0 0;
-}
-
-.card p {
-  margin: 0 0 15px;
-}
-
-h2 {
-  margin-top: 15px;
-}
-
-a {
-  color: #ff3333;
-}
-
-a:visited {
-  color: #9933cc;
-}
-
-a:focus {
-  outline-color: #ff3333;
-}
-
-a:active {
-  text-decoration: none;
-}
+a { color: #ff3333; }
+a:visited { color: #9933cc; }
+a:focus { outline-color: #ff3333; }
+a:active { text-decoration: none; }
 
 .to-top {
   text-align: center;
-}
 
-.to-top a {
-  text-decoration: none;
-  color: #000000;
-}
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
 
-@media (hover: hover){
-  .to-top a:hover {
+  a:active {
     text-decoration: underline;
   }
 }
