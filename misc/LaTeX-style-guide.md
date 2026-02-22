@@ -1,11 +1,11 @@
 ---
 layout: with-nav
-title: (La)TeX styleguide
+title: (La)TeX style guide
 ---
 
 {::options toc_levels="1..3" syntax_highlighter_opts="{default_lang: 'TeX'\}" /}
 
-These are my personal style guidelines for writing `.tex` files.
+These are my personal style guidelines for writing `.tex` files. These notes are built on my personal experience. You can also find elements of style guidelines in Knuth's ***The TeXbook***, in particular {% include hidden-message.html text="Chapters 16 through 19" message="16. Typing Math Formulas&#10;17. More about Math&#10;18. Fine Points of Mathematics Typing&#10;19. Displayed Equations"%}.
 
 * hi
 {:toc}
@@ -29,7 +29,7 @@ They are formatted as follows:
 \end{document}
 ```
 
-Note that the body is not indented (see [Nesting and environments](#nesting--environments)).
+Note that the body is not indented (see [Nesting & environments](#nesting--environments)).
 
 ### Preamble
 
@@ -78,7 +78,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <more content> ...
 ```
 
-See [Nesting and environments](#nesting--environments) for details about formatting environments.
+See [Nesting & environments](#nesting--environments) for details about formatting environments.
 
 {% include to-top.html %}
 
@@ -87,7 +87,7 @@ Commands
 
 ### Naming conventions
 
-I don't have any suggestions for naming commands. Typically they are `UpperCamelCase` or `lowerCamelCase`.
+I don't have any suggestions for naming commands. Typically they are `UpperCamelCase` or `lowerCamelCase` in packages, but I tend to keep macros `lowercase`.
 
 ### Common macros
 
@@ -104,6 +104,7 @@ By default, use curly braces around command arguments. Exceptions:
 * 0-argument commands are only followed by `{}` if needed (e.g. to not take the next token as argument).
 * `\left` and `\right`, as the curly braces can be confusing when the argument is a delimiter itself.
 
+*Example:*
 ```TeX
 $2^n$, but $2^{\mathbb{N}}$.
 
@@ -116,6 +117,24 @@ You can write \LaTeX. But using \LaTeX{} in the middle of a sentence requires cu
 \]
 ```
 
+### Long and multiple arguments
+
+If a command has a long argument, the long argument should be put on its own indented block: see [Nesting & environments](#nesting--environments) for details about formatting code blocks.
+
+If a command has multiple arguments, then each argument is enclosed by curly braces and there is no space between consecutive arguments. Use `%` to remove unwanted whitespace (see [Whitespace](#whitespace)).
+
+*Example:*
+```TeX
+\title[%
+  short title that is still somewhat long%
+]{ {%- raw %}%{%endraw %}
+  long title that is even longer than the short title, so long that even the
+  short title is somewhat long%
+}
+```
+
+If an argument has a key-value syntax, then they should be formatted as the arguments of a programming language. Pick a programming language style guide and stick to it: see, for instance, the [Google C++ style guide](https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions). I suggest writing key-value pairs as `<key>=<value>`, i.e., with no space around the equals sign. This is [PEP 8's recommendation](https://peps.python.org/pep-0008/#other-recommendations) for keyword arguments in Python.
+
 {% include to-top.html %}
 
 Text & general formatting
@@ -124,16 +143,18 @@ Text & general formatting
 ### Whitespace
 
 * I recommend using indentations, and this style guide will refer to indentation. However, you may also follow this style guide while ignoring all rules about indentation.
-* Tabs should be 2 spaces, except on Overleaf, where they should be 4 spaces because the indenation guidelines are fixed at 4 spaces. Do not use tabs to indent.
+* Tabs should be 2 spaces, except on Overleaf, where they should be 4 spaces because the indentation guidelines are fixed at 4 spaces. Do not use tabs to indent.
 * Remove trailing whitespace. Remove redundant spaces unless they are there for a good reason (such as formatting content in a table).
+* Line breaks sometimes create whitespace. Use `%` to remove unwanted whitespace.
 
 ### Line wrapping
 
-There are two options for line wrapping. Either you respect an 80 character limit, or you do not. In the latter case, do not insert newlines in the middle of a sentence (unless the sentence is broken up by, say, an equation). You may go to a new line at the end of a sentence, even if you are not starting a new paragraph, but this is not required.
+There are two options for line wrapping. Either you respect an 79 character limit, or you do not. In the latter case, do not insert newlines in the middle of a sentence (unless the sentence is broken up by, say, an equation). You may go to a new line at the end of a sentence, even if you are not starting a new paragraph, but this is not required.
 
-### Miscellaneous
+### Punctuation
 
-Use ``` ``...''``` for quotes, never `"..."`.
+* Use ``` ``...''``` for quotes, never `"..."`.
+* Trailing punctuation should be kept outside of inline math: write `Let $x = 0$.`, not `Let $x = 0.$`. **Do** use punctuation at the end of displayed math, when appropriate.
 
 {% include to-top.html %}
 
@@ -142,10 +163,10 @@ Math
 
 Air out math expressions, but keep the code similar to the expected output. General rules:
 * Ensure a single space around binary relations (e.g. arithmetic operations), after commas, between macros.
-* Ensure a signle space around a math symbol with its superscripts, subscripts, and functional arguments.
+* Ensure a single space around a math symbol with its superscripts, subscripts, and functional arguments.
 * No space between an operator (e.g. a function) and the following open delimiter (parenthesis, curly brace, etc.).
 * No space between negative sign and following expression.
-* Prefer no space between brackets and their inside content. This can be ignored for more complex content, see [Nesting and environments](#nesting--environments) for more guidelines.
+* Prefer no space between brackets and their inside content. This can be ignored for more complex content, see [Nesting & environments](#nesting--environments) for more guidelines.
 * For displayed math, never use `$$`: use `\[ ... \]` instead.
 
 Regarding `$ ... $` versus `\( ... \)` for inline math:
@@ -153,27 +174,42 @@ Regarding `$ ... $` versus `\( ... \)` for inline math:
 * When using the parentheses inline, separate the inner content from the delimiters by a space on both sides.
 * If you chose to use `$`, you should still use parentheses for complex inline math expressions that require their own nesting. In this case, format the math as you would displayed math.
 
+*Example:*
 ```TeX
-Some example mathematics: inline $e^{i \pi} + 1 = 0$, and display
+Write math expressions, both inline $e^{i \pi} + 1 = 0$, and display
 \[
   \operatorname{li}(x) \coloneq \int_0^x \frac{\textnormal{d} t}{\ln t}
   \qquad \textnormal{and} \qquad
-  \Pi_0(x) \coloneqq \frac{1}{2} \left( \sum_{p, n : p^n < x} \frac{1}{n} + \sum_{p, n : p^n \leq x} \frac{1}{n} \right).
+  \Pi_0(x) \coloneqq \frac{1}{2} \left(
+    \sum_{p, n : p^n < x} \frac{1}{n} + \sum_{p, n : p^n \leq x} \frac{1}{n}
+  \right).
 \]
 ```
 
 ### Line breaks
 
 Sometimes, mathematical expressions are too long to fit legibly on a single line: we then use line breaks. Line breaks in math content should prioritize symbols in the same order as syntax precedence: for example, break at the equals sign (`=`) before breaking at a plus sign (`+`) in one of the expressions.
-This also applies to grid symbols: break at a line break (`\\`) before breaking at an ampersand (`&`) (see [Arrays & grids](#arrays--grids)).
+This also applies to grid symbols: break at a line break command (`\\`) before breaking at an ampersand (`&`) (see [Arrays & grids](#arrays--grids)).
 The order of priority could be as follows:
 
-> `\\` > `&` > `=` > `␣` (multiplication) > `+` and so on.
+> `\\` > `&` > `=` > `\cdot` (multiplication) > `+` and so on.
 
 Line breaks come before the breaking symbol, except for line break commands (e.g. `\\`, `\cr`), where the line break comes after.
-Essentially, having the breaking symbol at the beginning of the line tells the reader that the line is not over.
+Essentially, having the breaking symbol at the beginning of the line tells the reader that the line is not over. When starting a new line, `&` and `=` (or similar) do increase the indentation, while `\cdot`, `+`, and so on, do.
 
-Symbols at line breaks should not be placed on their own line. An is for binary relations surrounded by whitespace commands: this can be on its own line:
+*Example:*
+
+```TeX
+\begin{align*}
+  \sum_{k = 1}^10 k & = \frac{1}{2} (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10
+    + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1) \\
+  & = \frac{1}{2} (11 + 11 + 11 + 11 + 11 + 11 + 11 + 11 + 11 + 11) \\
+  & = \frac{1}{2} 10 \cdot 11 \\
+  & = 55.
+\end{align*}
+```
+
+Symbols at line breaks should not be placed on their own line. An exception is for binary relations surrounded by whitespace commands. These can be on their own line:
 
 ```TeX
 \[
@@ -183,7 +219,7 @@ Symbols at line breaks should not be placed on their own line. An is for binary 
 \]
 ```
 
-Another way to break a line is to move content in brackets into an indented block.
+Another way to break a line is to move content in brackets into an indented block: see [Nesting & environments](#nesting--environments).
 
 ### Equivalent macros
 
@@ -215,6 +251,7 @@ The formatting of delimiters is separated into the *inner* and *outer* formattin
 
 If the code block is written on a single line, include a space between the delimiters and the inner content. Exception: brackets, when the inner content is simple (see [Math](#math)).
 
+*Example:*
 ```TeX
 \begin{equation}
   \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
@@ -225,6 +262,7 @@ Delimiters on their own line should have the same indentation level. Delimiters 
 
 When inner content is on its own line, it should be indented once more than the delimiters. As an exception, consecutively nested delimiters are allowed to be on the same indentation level. They can also share the same line (separated by a space) if that is more meaningful.
 
+*Example:*
 ```TeX
 \[
   f \colon \left\{ \begin{array}{ccc}
@@ -234,10 +272,23 @@ When inner content is on its own line, it should be indented once more than the 
 \]
 ```
 
+### Environment options
+
+Sometimes an environment allows for extra arguments. These should be formatted as a regular command with multiple arguments:
+
+```TeX
+\[
+  \begin{tikzpicture}[scale=1, ...]
+    ...
+  \end{tikzpicture}
+\]
+```
+
 ### Local commands
 
 Sometimes, we need to call some commands inside of an environment. The typical example of this is giving a label. These commands are placed after the opening delimiter, at the same indentation level. These commands most likely do not directly produce visual content, and should be each given their own line.
 
+*Example:*
 ```TeX
 \begin{equation}
 \label{E:linear-system}
@@ -247,6 +298,16 @@ Sometimes, we need to call some commands inside of an environment. The typical e
 
 See [Labels](#labels) for more guidelines about label names.
 
+An exception to the rule of placing local commands immediately after the opening delimiter is captions (and their labels) in figures. If you wish to put a caption at the bottom of a figure, and label it, then your code should look like this:
+
+```TeX
+\begin{figure}
+  ...
+  \caption{...}
+  \label{F:label}
+\end{figure}
+```
+
 ### Lists
 
 Lists and enumerations have some special rules.
@@ -255,6 +316,7 @@ Lists and enumerations have some special rules.
 * If the item content is on the same line as the `\item` command, the whole line is indented (as for all inner content).
 * Optionally (such as when the item content or the `\item` command is long), the `\item` command is on its own line, at the same indentatation level as the list environment. The item content is on a new line, with an extra indentation.
 
+*Example:*
 ```TeX
 A smaller list:
 \begin{itemize}
@@ -264,7 +326,8 @@ A smaller list:
 and larger list:
 \begin{itemize}
 \item[\bullet] \label{I:1}
-  Use this formatting when the item is quite long, say over 80 characters, or when it starts wrapping in your editor.
+  Use this formatting when the item is quite long, say over 79 characters, or
+  when it starts wrapping in your editor.
 \item
   Be consistent in each list!
 \end{itemize}
@@ -296,18 +359,30 @@ Labels
 ------
 
 Labels should be of the form `<envir>:<name>`, where
-* `<envir>` is an abbreviation of the type of environment that the label is attached to. My suggestions are
+* `<envir>` is a code for the type of environment that the label is attached to. Two possible conventions are using initials and using abbreviations:
 
-  | Environment | Abbreviation |
-  |:-:|:-:|
-  | section, subsection, etc. | `S`, `SS`, ... |
-  | theorem, proposition, corollary, lemma | `T`, `P`, `C`, `L` |
-  | definition, remark, example | `R`, `D`, `Ex` |
-  | equation, or any displayed math | `E` |
-  | figure, table, algorithm | `F`, `T` or `Tab`, `A` |
+  | Environment | Initials | Abbreviation |
+  |:-|:-|:-|
+  | part | `Pt` | `part` |
+  | chapter | `Ch` | `chap` |
+  | section | `S` | `sec` |
+  | subsection | `SS` | `subsec` |
+  | subsubsection | `SSS` | `subsubsec` |
+  | theorem | `T` | `thm` |
+  | proposition | `P` | `prop` |
+  | corollary | `C` | `cor` |
+  | lemma | `L` | `lem` |
+  | definition | `D` | `def` |
+  | remark | `R` | `rem` |
+  | example | `Ex` | `ex` |
+  | equation | `E` | `eq` |
+  | figure | `F` | `fig` |
+  | table | `T` or `Tab` | `tab` |
+  | algorithm | `A` | `alg` |
 
-  See [Local commands](#local-commands) for an example of a labeled environment.
 * `<name>` briefly describes the labeled content. Use words, abbreviated or not. I suggest using `kebab-case` when using several words, although you may choose another convention: just be consistent!
+
+See [Local commands](#local-commands) for an example of a labeled environment.
 
 Comments
 --------
