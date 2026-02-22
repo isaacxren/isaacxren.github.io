@@ -80,7 +80,7 @@ html {
   font-family: "Fraunces", serif;
   font-weight: 340;
   font-size: 15px;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;  // fix for landscape iPhone (among others, surely)
 }
 
 body {
@@ -88,7 +88,7 @@ body {
 }
 
 footer {
-  flex-shrink: 0;
+  flex-shrink: 0;  // just in case (sticky footer)
   margin-bottom: 17px;
 }
 
@@ -107,6 +107,7 @@ h2 {
   margin-top: 15px;
 }
 
+// Begin sticky footer stuff
 .wrapper {
   display: flex;
   min-height: 100vh;  // fallback
@@ -116,7 +117,7 @@ h2 {
 
 .content {
   flex: 1;
-}
+}  // end sticky footer stuff
 
 .card {
   text-align: center;
@@ -151,6 +152,13 @@ table {
   margin-right: auto;
 }
 
+table:not(.card table) {
+  border-spacing: 10px 2px;
+  display: block;
+  overflow-x: scroll;
+}
+
+// Begin dinkus
 hr {
   border: none;
   color: #000000;
@@ -161,7 +169,7 @@ hr::after {
   content: "~ · ~";
   display: block;
   text-align: center;
-}
+}  // end dinkus
 
 a { color: #ff3333; }
 a:visited { color: #9933cc; }
@@ -189,7 +197,7 @@ a:active { text-decoration: none; }
 
 code.highlighter-rouge {
   background-color: #efefef;
-  padding: 3px 2px 0.5px;
+  padding: 1px 2px;
   border-radius: 4px;
 }
 
@@ -211,3 +219,25 @@ pre.highlight {
   margin: 0;
   padding: 0;
 }
+
+.hidden-message {
+  cursor: help;
+}
+
+// Begin anchors
+a.anchor {
+  text-decoration: none;
+  opacity: 0;
+}
+
+a.anchor:focus {
+  opacity: 1;
+}
+
+a.anchor::after {
+  content: "¶";
+}
+
+:is(h1, h2, h3, h4, h5, h6):is(:hover, :active, :focus) {
+  a.anchor { opacity: 1 }
+}  // end anchors
