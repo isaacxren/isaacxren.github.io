@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-$s-margin: 17px; // small viewport margin
-$l-margin: 68px; // large viewport mininmum margin
-$l-content-width: 720px; // large viewport content width
-$s-width: 600px; // small viewport width threshold
+$s-margin: 17px;  // small viewport margin
+$l-margin: 68px;  // large viewport mininmum margin
+$l-content-width: 720px;  // large viewport content width
+$s-width: 600px;  // small viewport width threshold
 
-$l-width: $l-content-width + 2 * $l-margin; // large viewport width threshold
+$l-width: $l-content-width + 2 * $l-margin;  // large viewport width threshold
 $card-width: 240px;
 $card-left-margin: 34px;
 $card-border: 3px;
@@ -46,7 +46,7 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
   }
 
   .nav-card {
-    border-color: #000;
+    border-color: #ffffff00 #000;
     border-width: 0 #{$card-border};
     border-style: none double;
     border-radius: 7px;
@@ -109,7 +109,8 @@ h2 {
 
 .wrapper {
   display: flex;
-  min-height: 100vh;
+  min-height: 100vh;  // fallback
+  min-height: 100svh;
   flex-direction: column;
 }
 
