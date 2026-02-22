@@ -1,10 +1,10 @@
 ---
 layout: without-nav
+title: Isaac Ren
 ---
 
-[Isaac Ren](#)
+[{% include hidden-message.html text="Isaac Ren" message="The 'X' in the URL is my middle initial, Xiaoran :)" %}](#)
 ===========
-{: title="The 'X' in the URL is my middle initial, Xiaoran :)"}
 
 <div class="card" markdown="1">
 ![A picture of me with a trombone](me.jpg "This is the current best picture of myself that I have."){:width="240px"}{:height="360"}{:fetchpriority="high"}
@@ -21,7 +21,7 @@ layout: without-nav
 
 <hr />
 
-| address: | I am currently here<br />But at some point I'll be<br />somewhere else
+| address: | {% include hidden-message.html text="I am currently here<br />But at some point I'll be<br />somewhere else" message="This is actually just an attempt at a haiku :)" %}
 |---------:|:------------------------------------------------------------------
 |   email: | firstlast@kth.se
 | twitter: | [@{{ site.twitter.username }}](https://twitter.com/{{ site.twitter.username }})
