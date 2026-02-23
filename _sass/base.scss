@@ -8,8 +8,10 @@ $s-width: 600px;  // small viewport width threshold
 $l-width: $l-content-width + 2 * $l-margin;  // large viewport width threshold
 $card-width: 240px;
 $card-left-margin: 34px;
-$card-border: 3px;
+$card-border: 3px;  // for `with-nav` layout
 $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
+
+$base-font-size: 16px;
 
 @media screen and (max-width: 600px) {
   .wrapper {
@@ -32,7 +34,7 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
 
 @media screen and (min-width: #{$s-width}) {
   .wrapper {
-    margin: 0 calc(#{$s-margin} + (100vw - #{$s-width}) / (#{$l-width} - #{$s-width}) * (#{$l-margin} - #{$s-margin}))
+    margin: 0 calc(#{$s-margin} + (100vw - #{$s-width}) * #{($l-margin - $s-margin) / ($l-width - $s-width)})
   }
   
   .content {
@@ -52,19 +54,18 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
     border-radius: 7px;
   }
 
+  // First heading is inline to allow card
   h1:first-of-type {
     display: inline-block;
-    max-width: calc(
-        100vw - #{$total-card-width}
-        - 2 * calc(
-            #{$s-margin} + (100vw - #{$s-width}) / (#{$l-width} - #{$s-width})
-            * (#{$l-margin} - #{$s-margin})
-        )
-    );
-    margin-bottom: 6.1px;
+    max-width: calc(100vw - #{$total-card-width} - 2 * calc(#{$s-margin} + (100vw - #{$s-width}) * #{($l-margin - $s-margin) / ($l-width - $s-width)}));
+  }
+  
+  // First paragraph after first heading creates too much margin: remove it
+  h1:first-of-type ~ p:first-of-type {
+    margin-top: 0;
   }
 
-  hr.block-card-only {
+  hr.block-card-only {  // for `with-nav` layout
     display: none;
   }
 }
@@ -76,12 +77,21 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
   }
 }
 
+// Font
 html {
   font-family: "Fraunces", serif;
   font-weight: 340;
-  font-size: 16px;
+  font-size: #{$base-font-size};
   -webkit-text-size-adjust: 100%;  // fix for landscape iPhone (among others, surely)
 }
+
+strong { font-weight: 680 }
+
+code {
+  font-family: "Recursive", monospace;
+  font-weight: 400;
+  font-size: #{.875 * $base-font-size};
+}  // end font
 
 body {
   margin: 0;
@@ -92,19 +102,8 @@ footer {
   margin-bottom: 17px;
 }
 
-code {
-  font-family: "Recursive", monospace;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-h1:first-of-type a {
-  color: #000;
-  text-decoration: none;
-}
-
 h2 {
-  margin-top: 15px;
+  margin-top: #{$base-font-size};  // to match <p>
 }
 
 // Begin sticky footer stuff
@@ -125,10 +124,8 @@ h2 {
   th { font-weight: 340 }
   th, td { vertical-align: top }
   hr { margin: 7px 0 0 }
-  p { margin: 0 0 15px }
+  p:first-of-type { margin-top: 0 }
 }
-
-strong { font-weight: 680 }
 
 ul {
   list-style-type: "• ";
@@ -162,7 +159,7 @@ table:not(.card table) {
 hr {
   border: none;
   color: #000000;
-  margin: 18.675px 0 0;
+  margin: #{.83 * 1.5em} 0 0;  // top margin = h2 top margin
 }
 
 hr::after {
@@ -171,6 +168,7 @@ hr::after {
   text-align: center;
 }  // end dinkus
 
+// <a>
 a, a.anchor span { color: #ff3333; }
 a:visited, a.anchor:visited span { color: #9933cc; }
 a:focus { outline-color: #ff3333; }
@@ -181,7 +179,7 @@ a:active { text-decoration: none; }
 
   a {
     text-decoration: none;
-    color: #000000;
+    color: #000;
   }
 
   a:active {
@@ -198,27 +196,24 @@ a:active { text-decoration: none; }
 // Begin anchors
 a.anchor {
   text-decoration: none;
-}
-
-a.anchor {
   color: #000;
 }
 
 a.anchor span::after {
-  content: " ¶";
+  content: "¶";
   opacity: 0;
   position: absolute;
   padding-left: 7px;
 }
 
-a.anchor:focus span::after {
+a.anchor:focus span::after {  // for touchscreen, maybe?
   opacity: 1;
 }
 
 :is(h1, h2, h3, h4, h5, h6):is(:hover, :active, :focus) a.anchor span::after {
   opacity: 1;
 }  // end anchors
-
+// end <a>
 
 // begin code highlighting
 code.highlighter-rouge {
