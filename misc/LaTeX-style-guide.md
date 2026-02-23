@@ -17,14 +17,14 @@ Document structure
 ------------------
 
 A `.tex` file is divided into two parts: the **preamble** and the **body**.
-They are formatted as follows:
+The file is formatted as follows:
 
 ```TeX
-% <preamble>
+<preamble>
 
 \begin{document}
 
-% <body>
+<body>
 
 \end{document}
 ```
@@ -95,9 +95,7 @@ When defining math operators, use `\DeclareMathOperator` (from the library `amso
 
 ### Usage
 
-Commands that are used outside of the regular flow of text should preferably be on their own line:
-* Commands that **do not** directly produce visible elements should be given their own line.
-* Commands that **do** produce visible elements should preferably be on their own line, but sometimes it is more meaningful to have several commands on the same line.
+Commands that are used outside of the regular flow of text should preferably be on their own line, but sometimes it is more meaningful to have several commands on the same line.
 
 By default, use curly braces around command arguments. Exceptions:
 * Any command with nonstandard syntax (e.g. `^` and `_`, when the braces are not needed). When the argument is a command with arguments, use braces (it probably would not compile, anyways).
@@ -127,7 +125,7 @@ If a command has multiple arguments, then each argument is enclosed by curly bra
 ```TeX
 \title[%
   short title that is still somewhat long%
-]{ {%- raw %}%{%endraw %}
+]{%- raw %}{%{%endraw %}
   long title that is even longer than the short title, so long that even the
   short title is somewhat long%
 }
@@ -274,7 +272,7 @@ When inner content is on its own line, it should be indented once more than the 
 
 ### Environment options
 
-Sometimes an environment allows for extra arguments. These should be formatted as a regular command with multiple arguments:
+Sometimes an environment allows for extra arguments. These should be formatted as a regular command with multiple arguments (see [Long and multiple arguments](#long-and-multiple-arguments)):
 
 ```TeX
 \[
@@ -372,6 +370,7 @@ Labels should be of the form `<envir>:<name>`, where
   | proposition | `P` | `prop` |
   | corollary | `C` | `cor` |
   | lemma | `L` | `lem` |
+  | conjecture | `Conj` | `conj` |
   | definition | `D` | `def` |
   | remark | `R` | `rem` |
   | example | `Ex` | `ex` |
@@ -380,6 +379,7 @@ Labels should be of the form `<envir>:<name>`, where
   | table | `T` or `Tab` | `tab` |
   | algorithm | `A` | `alg` |
 
+  These are merely suggestions, you may pick your own convention.
 * `<name>` briefly describes the labeled content. Use words, abbreviated or not. I suggest using `kebab-case` when using several words, although you may choose another convention: just be consistent!
 
 See [Local commands](#local-commands) for an example of a labeled environment.
