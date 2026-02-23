@@ -171,8 +171,8 @@ hr::after {
   text-align: center;
 }  // end dinkus
 
-a { color: #ff3333; }
-a:visited { color: #9933cc; }
+a, a.anchor span { color: #ff3333; }
+a:visited, a.anchor:visited span { color: #9933cc; }
 a:focus { outline-color: #ff3333; }
 a:active { text-decoration: none; }
 
@@ -195,6 +195,33 @@ a:active { text-decoration: none; }
   }
 }
 
+// Begin anchors
+a.anchor {
+  text-decoration: none;
+}
+
+a.anchor {
+  color: #000;
+}
+
+a.anchor span::after {
+  opacity: 0;
+}
+
+a.anchor:focus span::after {
+  opacity: 1;
+}
+
+a.anchor span::after {
+  content: " ¶";
+}
+
+:is(h1, h2, h3, h4, h5, h6):is(:hover, :active, :focus) a.anchor span::after {
+  opacity: 1;
+}  // end anchors
+
+
+// begin code highlighting
 code.highlighter-rouge {
   background-color: #efefef;
   padding: 1px 2px;
@@ -218,26 +245,8 @@ div.highlight {
 pre.highlight {
   margin: 0;
   padding: 0;
-}
+}  // end code highlighting
 
 .hidden-message {
   cursor: help;
 }
-
-// Begin anchors
-a.anchor {
-  text-decoration: none;
-  opacity: 0;
-}
-
-a.anchor:focus {
-  opacity: 1;
-}
-
-a.anchor::after {
-  content: "¶";
-}
-
-:is(h1, h2, h3, h4, h5, h6):is(:hover, :active, :focus) {
-  a.anchor { opacity: 1 }
-}  // end anchors
