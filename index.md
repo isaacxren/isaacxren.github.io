@@ -3,8 +3,8 @@ layout: without-nav
 title: Isaac Ren
 ---
 
-[{% include hidden-message.html text="Isaac Ren" message="The 'X' in the URL is my middle initial, Xiaoran :)" %}](#)
-===========
+[Isaac Ren<span></span>](#){:.anchor.hidden-message title="The 'X' in the URL is my middle initial, Xiaoran :)"}
+==========
 
 <div class="card" markdown="1">
 ![A picture of me with a trombone](me.jpg "This is the current best picture of myself that I have."){:width="240px"}{:height="360"}{:fetchpriority="high"}
@@ -13,7 +13,7 @@ title: Isaac Ren
 
 *Go to:*
 <br />
-**home** · [misc](/misc/)
+{% include nav.html %}
 
 *On this page:*
 <br />

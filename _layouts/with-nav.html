@@ -3,8 +3,13 @@ layout: default
 ---
 
 <main class="content">
-<h1><a href="#">{{ page.title }}</a></h1>
+<h1><a class="anchor" href="#" title="Click to anchor page here">{{ page.title }}<span></span></a></h1>
+<nav class="card nav-card">
+<span style="font-size: 1.2em; font-weight: bold">Isaac Ren</span>
+<hr />
 {% include nav.html %}
+<hr class="block-card-only" />
+</nav>
 {{ content }}
 </main>
 {% include footer.html %}
