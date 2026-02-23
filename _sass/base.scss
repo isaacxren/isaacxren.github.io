@@ -79,7 +79,7 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
 html {
   font-family: "Fraunces", serif;
   font-weight: 340;
-  font-size: 15px;
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;  // fix for landscape iPhone (among others, surely)
 }
 
@@ -95,7 +95,7 @@ footer {
 code {
   font-family: "Recursive", monospace;
   font-weight: 400;
-  font-size: 13.5px;
+  font-size: 14px;
 }
 
 h1:first-of-type a {
@@ -205,15 +205,12 @@ a.anchor {
 }
 
 a.anchor span::after {
+  content: " ¶";
   opacity: 0;
 }
 
 a.anchor:focus span::after {
   opacity: 1;
-}
-
-a.anchor span::after {
-  content: " ¶";
 }
 
 :is(h1, h2, h3, h4, h5, h6):is(:hover, :active, :focus) a.anchor span::after {
