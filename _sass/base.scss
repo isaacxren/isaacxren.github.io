@@ -207,6 +207,8 @@ a.anchor {
 a.anchor span::after {
   content: " ¶";
   opacity: 0;
+  position: absolute;
+  padding-left: 7px;
 }
 
 a.anchor:focus span::after {
