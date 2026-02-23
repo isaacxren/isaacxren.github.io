@@ -131,7 +131,7 @@ If a command has multiple arguments, then each argument is enclosed by curly bra
 }
 ```
 
-If an argument has a key-value syntax, then they should be formatted as the arguments of a programming language. Pick a programming language style guide and stick to it: see, for instance, the [Google C++ style guide](https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions). I suggest writing key-value pairs as `<key>=<value>`, i.e., with no space around the equals sign. This is [PEP 8's recommendation](https://peps.python.org/pep-0008/#other-recommendations) for keyword arguments in Python.
+If an argument has a key-value syntax, then they should be formatted like function arguments in a programming language. Pick a programming language style guide and stick to it: see, for instance, the [Google C++ style guide](https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions). I suggest writing key-value pairs as `<key>=<value>`, i.e., with no space around the equals sign. This is [PEP 8's recommendation](https://peps.python.org/pep-0008/#other-recommendations) for keyword arguments in Python.
 
 {% include to-top.html %}
 
