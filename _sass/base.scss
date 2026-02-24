@@ -11,8 +11,6 @@ $card-left-margin: 34px;
 $card-border: 3px;  // for `with-nav` layout
 $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
 
-$base-font-size: 16px;
-
 @media screen and (max-width: 600px) {
   .wrapper {
     margin: 0 #{$s-margin};
@@ -81,7 +79,7 @@ $base-font-size: 16px;
 html {
   font-family: "Fraunces", serif;
   font-weight: 340;
-  font-size: #{$base-font-size};
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;  // fix for landscape iPhone (among others, surely)
 }
 
@@ -90,7 +88,7 @@ strong { font-weight: 680 }
 code {
   font-family: "Recursive", monospace;
   font-weight: 400;
-  font-size: #{.875 * $base-font-size};
+  font-size: .875rem;
 }  // end font
 
 body {
@@ -103,7 +101,7 @@ footer {
 }
 
 h2 {
-  margin-top: #{$base-font-size};  // to match <p>
+  margin-top: 1rem;  // to match <p>
 }
 
 // Begin sticky footer stuff
@@ -159,7 +157,6 @@ table:not(.card table) {
 hr {
   border: none;
   color: #000000;
-  margin: #{.83 * 1.5em} 0 0;  // top margin = h2 top margin
 }
 
 hr::after {
