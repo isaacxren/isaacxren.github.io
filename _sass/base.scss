@@ -77,7 +77,7 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
 
 // Font
 html {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces", Georgia, serif;
   font-weight: 340;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;  // fix for landscape iPhone (among others, surely)
@@ -203,9 +203,9 @@ a.anchor span::after {
   padding-left: 7px;
 }
 
-a.anchor:focus span::after {  // for touchscreen, maybe?
-  opacity: 1;
-}
+// a.anchor:focus span::after {  // for touchscreen, maybe?
+//   opacity: 1;
+// }
 
 :is(h1, h2, h3, h4, h5, h6):is(:hover, :active, :focus) a.anchor span::after {
   opacity: 1;
