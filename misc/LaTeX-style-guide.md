@@ -7,7 +7,7 @@ title: (La)TeX style guide
 
 These are my personal style guidelines for writing `.tex` files. These notes are built on my personal experience. You can also find elements of style guidelines in Knuth's ***The TeXbook***, in particular {% include hidden-message.html text="Chapters 16 through 19" message="16. Typing Math Formulas&#10;17. More about Math&#10;18. Fine Points of Mathematics Typing&#10;19. Displayed Equations"%}.
 
-* hi
+* table of contents here
 {:toc}
 
 
@@ -193,7 +193,7 @@ The order of priority could be as follows:
 > `\\` > `&` > `=` > `\cdot` (multiplication) > `+` and so on.
 
 Line breaks come before the breaking symbol, except for line break commands (e.g. `\\`, `\cr`), where the line break comes after.
-Essentially, having the breaking symbol at the beginning of the line tells the reader that the line is not over. When starting a new line, `&` and `=` (or similar) do increase the indentation, while `\cdot`, `+`, and so on, do.
+Essentially, having the breaking symbol at the beginning of the line tells the reader that the line is not over. When starting a new line, formatting commands like `\\`, `\cr`, and `&` do not increase the indentation, while visible elements like `\cdot`, `+`, and so on, do.
 
 *Example:*
 
