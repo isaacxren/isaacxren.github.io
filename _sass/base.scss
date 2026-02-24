@@ -171,20 +171,18 @@ a:visited, a.anchor:visited span { color: #9933cc; }
 a:focus { outline-color: #ff3333; }
 a:active { text-decoration: none; }
 
-.to-top {
+a.to-top {
+  display: block;
   text-align: center;
+  text-decoration: none;
+  color: #000;
 
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-
-  a:active {
+  &:active {
     text-decoration: underline;
   }
 
   @media (hover: hover){
-    a:hover {
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -203,11 +201,8 @@ a.anchor span::after {
   padding-left: 7px;
 }
 
-// a.anchor:focus span::after {  // for touchscreen, maybe?
-//   opacity: 1;
-// }
-
-:is(h1, h2, h3, h4, h5, h6):is(:hover, :active, :focus) a.anchor span::after {
+a.anchor:focus span::after,  // for focusing
+:is(h1, h2, h3, h4, h5, h6):is(:hover, :active) a.anchor span::after {
   opacity: 1;
 }  // end anchors
 // end <a>

@@ -10,8 +10,7 @@ These are my personal style guidelines for writing `.tex` files. These notes are
 * table of contents here
 {:toc}
 
-
-{% include to-top.html %}
+[~ ˆ ~](# "Top of the page"){:.to-top}
 
 Document structure
 ------------------
@@ -80,7 +79,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 See [Nesting & environments](#nesting--environments) for details about formatting environments.
 
-{% include to-top.html %}
+[~ ˆ ~](# "Top of the page"){:.to-top}
 
 Commands
 --------
@@ -133,7 +132,7 @@ If a command has multiple arguments, then each argument is enclosed by curly bra
 
 If an argument has a key-value syntax, then they should be formatted like function arguments in a programming language. Pick a programming language style guide and stick to it: see, for instance, the [Google C++ style guide](https://google.github.io/styleguide/cppguide.html#Function_Declarations_and_Definitions). I suggest writing key-value pairs as `<key>=<value>`, i.e., with no space around the equals sign. This is [PEP 8's recommendation](https://peps.python.org/pep-0008/#other-recommendations) for keyword arguments in Python.
 
-{% include to-top.html %}
+[~ ˆ ~](# "Top of the page"){:.to-top}
 
 Text & general formatting
 -------------------------
@@ -154,7 +153,7 @@ There are two options for line wrapping. Either you respect an 79 character limi
 * Use ``` ``...''``` for quotes, never `"..."`.
 * Trailing punctuation should be kept outside of inline math: write `Let $x = 0$.`, not `Let $x = 0.$`. **Do** use punctuation at the end of displayed math, when appropriate.
 
-{% include to-top.html %}
+[~ ˆ ~](# "Top of the page"){:.to-top}
 
 Math
 ----
@@ -227,7 +226,7 @@ Sometimes there are several ways to write the same thing that are either identic
 * Use `\mid` instead of `|` when defining a set with conditions (e.g. `\{ x \in X \mid x > 0 \}`).
 * Place semantically closer super/subscripts closer to the symbol: for instance, the square of an indexed variable `x_i` should be written `x_i^2`, and not `x^2_i`. Ideally, you should be able to put parentheses around the first attachment: `(x_i)^2` makes sense, while `(x^2)_i` does not.
 
-{% include to-top.html %}
+[~ ˆ ~](# "Top of the page"){:.to-top}
 
 Nesting & environments
 ----------------------
@@ -351,7 +350,7 @@ While in general, symbols at line breaks should not be on their own line, we all
 \]
 ```
 
-{% include to-top.html %}
+[~ ˆ ~](# "Top of the page"){:.to-top}
 
 Labels
 ------
