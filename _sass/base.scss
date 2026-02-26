@@ -129,8 +129,11 @@ footer {
 .card {
   text-align: center;
 
-  th { font-weight: 340 }
-  th, td { vertical-align: top }
+  tr {
+    vertical-align: top;
+    td:first-of-type { text-align: right }
+    td:last-of-type { text-align: left }
+  }
   hr { margin: 7px 0 0 }
   p:first-of-type { margin-top: 0 }
 }

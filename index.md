@@ -22,7 +22,6 @@ title: Isaac Ren
 <hr />
 
 | address: | {% include hidden-message.html text="I am currently here<br />But at some point I'll be<br />somewhere else" message="This is actually just an attempt at a haiku :)" %}{: style="white-space: nowrap;"}
-|---------:|:------------------------------------------------------------------
 |   email: | firstlast@kth.se
 | twitter: | [@{{ site.twitter.username }}](https://twitter.com/{{ site.twitter.username }})
 |  github: | [@{{ site.github.username }}](https://github.com/{{ site.github.username }})
