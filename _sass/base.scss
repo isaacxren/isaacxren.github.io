@@ -176,8 +176,8 @@ hr::after {
 }  // end dinkus
 
 // <a>
-a, a.anchor span { color: #ff3333; }
-a:visited, a.anchor:visited span { color: #9933cc; }
+a, a.anchor::after { color: #ff3333; }
+a:visited, a.anchor:visited::after { color: #9933cc; }
 a:focus { outline-color: #ff3333; }
 a:active { text-decoration: none; }
 
@@ -209,15 +209,15 @@ a.anchor {
   color: #000;
 }
 
-a.anchor span::after {
+a.anchor::after {
   content: "¶";
   opacity: 0;
   position: absolute;
   padding-left: 7px;
 }
 
-a.anchor:focus span::after,  // for focusing
-:is(h1, h2, h3, h4, h5, h6):hover a.anchor span::after {  // hover over entire block
+a.anchor:focus::after,  // for focusing
+:is(h1, h2, h3, h4, h5, h6):hover a.anchor::after {  // hover over entire block
   opacity: 1;
 }  // end anchors
 // end <a>
