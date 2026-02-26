@@ -295,15 +295,16 @@ Sometimes, we need to call some commands inside of an environment. The typical e
 
 See [Labels](#labels) for more guidelines about label names.
 
-An exception to the rule of placing local commands immediately after the opening delimiter is captions (and their labels) in figures. If you wish to put a caption at the bottom of a figure, and label it, then your code should look like this:
-
-```TeX
-\begin{figure}
-  ...
-  \caption{...}
-  \label{F:label}
-\end{figure}
-```
+Exceptions:
+* captions (and their labels) in figures. If you wish to put a caption at the bottom of a figure, and label it, then your code should look like this:
+  ```TeX
+  \begin{figure}
+    ...
+    \caption{...}
+    \label{F:label}
+  \end{figure}
+  ```
+* `\qedhere` (from the `amsthm` package) goes at the end of the equation block.
 
 ### Lists
 
