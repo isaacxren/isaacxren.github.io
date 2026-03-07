@@ -77,7 +77,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <more content> ...
 ```
 
-See [Nesting & environments](#nesting--environments) for details about formatting environments.
+If you do not want to start a new paragraph after such an environment, add a single `%` to the blank line after the environment. See [Nesting & environments](#nesting--environments) for details about formatting environments.
+
+New section commands may be accompanied by other commands, such as labels. These commands belong to the same code block as the `\section` (or similar) command and should not be separated by a blank line.
 
 [~ ˆ ~](# "Top of the page"){:.to-top}
 
@@ -177,7 +179,7 @@ Write math expressions, both inline $e^{i \pi} + 1 = 0$, and display
 \[
   \operatorname{li}(x) \coloneq \int_0^x \frac{\textnormal{d} t}{\ln t}
   \qquad \textnormal{and} \qquad
-  \Pi_0(x) \coloneqq \frac{1}{2} \left(
+  \Pi_0(x) \coloneq \frac{1}{2} \left(
     \sum_{p, n : p^n < x} \frac{1}{n} + \sum_{p, n : p^n \leq x} \frac{1}{n}
   \right).
 \]
@@ -312,7 +314,7 @@ Lists and enumerations have some special rules.
 
 * Each item of the list gets its own line.
 * If the item content is on the same line as the `\item` command, the whole line is indented (as for all inner content).
-* Optionally (such as when the item content or the `\item` command is long), the `\item` command is on its own line, at the same indentatation level as the list environment. The item content is on a new line, with an extra indentation.
+* Optionally (such as when the item content or the `\item` command is long), the `\item` command is on its own line, at the same indentation level as the list environment. The item content is on a new line, with an extra indentation.
 
 *Example:*
 ```TeX
@@ -390,4 +392,4 @@ Comments
 Comments are normally introduced by a single `%`. This can be ignored when separating parts of the code with a long comment (e.g. a line of 80 `%`'s).
 
 * One space after `%`.
-* End-of-line comments are preceeded by two spaces, unless they also serve to remove the trailing whitespace that the TeX compiler would insert, in which case they are preceeded by no space.
+* End-of-line comments are preceded by two spaces, unless they also serve to remove the trailing whitespace that the TeX compiler would insert, in which case they are preceded by no space.
