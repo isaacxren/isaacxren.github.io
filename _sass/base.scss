@@ -179,9 +179,9 @@ hr::after {
 }  // end dinkus
 
 // <a>
-a, a.anchor::after { color: #ff3333; }
+a, a.anchor::after { color: #ff4444 }
 a:visited, a.anchor:visited::after { color: #9933cc; }
-a:focus { outline-color: #ff3333; }
+a:focus { outline-color: #ff4444; }
 a:active { text-decoration: none; }
 
 a.to-top {
