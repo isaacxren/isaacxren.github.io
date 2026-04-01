@@ -3,6 +3,6 @@
 {%- if page.dir == item.url and page.name == "index.md" -%}
 <strong>{{ item.name }}</strong>
 {%- else -%}
-<a href="{{ item.url }}">{{ item.name }}</a>
+<a href="{{ item.url }}" title="You are here!">{{ item.name }}</a>
 {%- endif -%}
 {%- endfor %}
