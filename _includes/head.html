@@ -15,8 +15,9 @@
 
 {% if page.title == site.title or page.title == nil -%}
 <title>{{ site.title }}</title>
-{% seo title=false -%}
+{% seo canonical=false title=false -%}
 {%- else -%}
-{% seo -%}
+{% seo canonical=false -%}
 {% endif -%}
+<link rel="canonical" href="https://isaac.ren">
 </head>
