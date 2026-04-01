@@ -1,8 +1,8 @@
 {% for item in site.data.nav -%}
 {%- if forloop.first == false %} · {% endif -%}
 {%- if page.dir == item.url and page.name == "index.md" -%}
-<strong>{{ item.name }}</strong>
+<strong title="You are here!">{{ item.name }}</strong>
 {%- else -%}
-<a href="{{ item.url }}" title="You are here!">{{ item.name }}</a>
+<a href="{{ item.url }}">{{ item.name }}</a>
 {%- endif -%}
 {%- endfor %}
