@@ -26,11 +26,17 @@ title: Isaac Ren
 <hr />
 </div>
 
-I am a math PhD student at
+I am soon to be a math postdoctoral researcher at
+[Imperial College London](https://www.imperial.ac.uk/), under the mentorship of
+[Anthea Monod](https://sites.google.com/view/antheamonod/) and funded by the
+[Knut and Alice Wallenberg Foundation](https://kaw.wallenberg.org/en/knut-and-alice-wallenberg-foundation)
+and [WASP](https://wasp-sweden.org/wasp-postdoc/).
+
+I obtained my PhD at
 [KTH Royal Institute of Technology](https://www.kth.se/) in Stockholm, under
 the supervision of Associate Professor
-[Martina Scolamiero](https://www.kth.se/profile/scola). I also have an
-[official profile page](https://www.kth.se/profile/isaacren).
+[Martina Scolamiero](https://www.kth.se/profile/scola) and Professor
+[Wojciech Chachólski](https://www.kth.se/profile/wojtek?l=en).
 
 My research interests include topological data analysis and homological
 algebra. I have also worked on algebraic rewriting theory and computational
@@ -61,6 +67,15 @@ Preprints & publications {#papers}
 {% for item in site.data.items.conf %}
 * ["{{ item.title }},"]({{ item.url }}) with {{ item.authors }}, {{ item.location }}, {{ item.year }}.
 {%- endfor %}
+
+### Thesis
+
+I defended my thesis
+["Algebraic invariants for filtered spaces and their computation"](thesis.pdf){:.file-size data-size="4.4 MB"}
+on May 29th, 2026. The published version of my thesis is available
+[on DiVA](https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-380673), and the
+source material is available
+[on GitHub](https://github.com/th-rtyf-re/phd-thesis).
 
 [~ ˆ ~](# "Top of the page"){:.to-top}
 

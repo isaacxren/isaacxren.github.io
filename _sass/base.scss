@@ -254,3 +254,13 @@ pre.highlight {
 .hidden-message {
   cursor: help;
 }
+
+.file-size::after {
+  text-decoration: underline;
+}
+
+.file-size::after {
+  content: "(" attr(data-size) ")";
+  display: inline-block;
+  text-decoration: none;
+}
