@@ -1,6 +1,6 @@
 ---
 ---
 
-@import "base";
-@import "highlight";
-@include dm-highlight;
+@use "base";
+@use "highlight";
+@include highlight.dm-highlight;

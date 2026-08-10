@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:math";
 
 $s-margin: 17px;  // small viewport margin
 $l-margin: 68px;  // large viewport mininmum margin
@@ -32,7 +33,7 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
 
 @media screen and (min-width: #{$s-width}) {
   .wrapper {
-    margin: 0 calc(#{$s-margin} + (100vw - #{$s-width}) * #{($l-margin - $s-margin) / ($l-width - $s-width)})
+    margin: 0 calc(#{$s-margin} + (100vw - #{$s-width}) * math.div($l-margin - $s-margin, $l-width - $s-width));
   }
   
   .content {
@@ -55,7 +56,7 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
   // First heading is inline to allow card
   h1:first-of-type {
     display: inline-block;
-    max-width: calc(100vw - #{$total-card-width} - 2 * calc(#{$s-margin} + (100vw - #{$s-width}) * #{($l-margin - $s-margin) / ($l-width - $s-width)}));
+    max-width: calc(100vw - #{$total-card-width} - 2 * calc(#{$s-margin} + (100vw - #{$s-width}) * math.div($l-margin - $s-margin, $l-width - $s-width)));
   }
   
   // First paragraph after first heading creates too much margin: remove it
