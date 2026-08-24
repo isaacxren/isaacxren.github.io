@@ -19,7 +19,7 @@ title: Isaac Ren
 <hr />
 
 | address: | {% include hidden-message.html text="I am currently here<br />But at some point I'll be<br />somewhere else" message="This is actually just an attempt at a haiku :)" %}{: style="white-space: nowrap;"}
-|   email: | firstlast@kth.se
+|   email: | firstlast@kth.se <br /> mail@first.last
 | twitter: | [@{{ site.twitter.username }}](https://twitter.com/{{ site.twitter.username }})
 |  github: | [@{{ site.github.username }}](https://github.com/{{ site.github.username }})
 
@@ -43,7 +43,7 @@ algebra. I have also worked on algebraic rewriting theory and computational
 aspects of knot homology.
 
 I have previously studied at École Normale Supérieure de Lyon and Lycée Louis
-le Grand. I speak English and French.
+le Grand. I speak English, French, and Swedish.
 
 [~ ˆ ~](# "Top of the page"){:.to-top}
 
@@ -70,7 +70,7 @@ Preprints & publications {#papers}
 
 ### Thesis
 
-I defended my thesis
+I defended my PhD thesis
 ["Algebraic invariants for filtered spaces and their computation"](thesis.pdf){:.file-size data-size="4.4 MB"}
 on May 29th, 2026. The published version of my thesis is available
 [on DiVA](https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-380673), and the
