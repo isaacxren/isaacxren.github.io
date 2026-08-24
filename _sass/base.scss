@@ -74,6 +74,11 @@ $total-card-width: $card-width + $card-left-margin + 2 * $card-border;
     width: #{$l-content-width};
     margin: 0 auto;
   }
+  
+  h1:first-of-type {
+    display: inline-block;
+    max-width: #{$l-content-width - $total-card-width};
+  }
 }
 
 // Font
@@ -236,7 +241,7 @@ code.highlighter-rouge {
 div.highlighter-rouge {
   background-color: #efefef;
   margin: 1em 0;
-  border-radius: 4px;  
+  border-radius: 4px;
 }
 
 div.highlight {
@@ -250,6 +255,12 @@ div.highlight {
 pre.highlight {
   margin: 0;
   padding: 0;
+}
+
+figure.highlight {
+  margin: 1em 0;
+  background-color: #efefef;
+  border-radius: 4px;
 }  // end code highlighting
 
 .hidden-message {
