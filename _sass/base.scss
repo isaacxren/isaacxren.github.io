@@ -272,7 +272,8 @@ figure.highlight {
 }
 
 .file-size::after {
-  content: "(" attr(data-size) ")";
+  content: " (" attr(data-size) ")";
+  white-space: pre;
   display: inline-block;
   text-decoration: none;
 }

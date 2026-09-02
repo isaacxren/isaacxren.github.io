@@ -30,7 +30,8 @@ I am a math postdoctoral researcher at
 [Imperial College London](https://www.imperial.ac.uk/), under the mentorship of
 [Anthea Monod](https://sites.google.com/view/antheamonod/) and funded by the
 [Knut and Alice Wallenberg Foundation](https://kaw.wallenberg.org/en/knut-and-alice-wallenberg-foundation)
-and [WASP](https://wasp-sweden.org/wasp-postdoc/).
+and [WASP](https://wasp-sweden.org/wasp-postdoc/). I also have an
+[official profile page](https://profiles.imperial.ac.uk/i.ren).
 
 I obtained my PhD at
 [KTH Royal Institute of Technology](https://www.kth.se/) in Stockholm, under
@@ -71,10 +72,10 @@ Preprints & publications {#papers}
 ### Thesis
 
 I defended my PhD thesis
-["Algebraic invariants for filtered spaces and their computation"](thesis.pdf){:.file-size data-size="4.4 MB"}
-on May 29th, 2026. The published version of my thesis is available
-[on DiVA](https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-380673), and the
-source material is available
+["Algebraic invariants for filtered spaces and their computation"](https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-380673)
+on May 29th, 2026. You can view the
+[full PDF here](thesis.pdf){:.file-size data-size="4.4 MB"} and the
+source material
 [on GitHub](https://github.com/th-rtyf-re/phd-thesis).
 
 [~ ˆ ~](# "Top of the page"){:.to-top}
