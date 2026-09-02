@@ -19,14 +19,14 @@ title: Isaac Ren
 <hr />
 
 | address: | {% include hidden-message.html text="I am currently here<br />But at some point I'll be<br />somewhere else" message="This is actually just an attempt at a haiku :)" %}{: style="white-space: nowrap;"}
-|   email: | firstlast@kth.se <br /> mail@first.last
+|   email: | *f*.*last*@imperial.ac.uk <br /> mail@*first*.*last*
 | twitter: | [@{{ site.twitter.username }}](https://twitter.com/{{ site.twitter.username }})
 |  github: | [@{{ site.github.username }}](https://github.com/{{ site.github.username }})
 
 <hr />
 </div>
 
-I am soon to be a math postdoctoral researcher at
+I am a math postdoctoral researcher at
 [Imperial College London](https://www.imperial.ac.uk/), under the mentorship of
 [Anthea Monod](https://sites.google.com/view/antheamonod/) and funded by the
 [Knut and Alice Wallenberg Foundation](https://kaw.wallenberg.org/en/knut-and-alice-wallenberg-foundation)
